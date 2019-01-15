@@ -6,7 +6,7 @@ function SearchBar() {
         <div className="SearchBar">
 
             <div className="logo">
-            <i class="fab fa-instagram"></i>
+            <i className="fab fa-instagram"></i>
             <img className="logoScript" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/320px-Instagram_logo.svg.png" alt="Instagram logo"/>
             </div>
 
