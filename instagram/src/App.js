@@ -9,12 +9,20 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      posts: dummyData,
+      posts: []
     };
+  }
+
+  componentDidMount() {
+    console.log("CDM is running");
+    
+    this.setState({posts: dummyData});
+        
   }
 
 
   render() {
+    console.log("rendering");
     return (
       <div className="App">
          <SearchBar />

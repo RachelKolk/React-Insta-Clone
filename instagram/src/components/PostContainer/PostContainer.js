@@ -6,6 +6,7 @@ import "./PostContainer.css";
 
 function PostContainer(props) {
     console.log("posting...");
+    console.log(props);
     return (
         <div>
             {props.posts.map(postInMap => (
