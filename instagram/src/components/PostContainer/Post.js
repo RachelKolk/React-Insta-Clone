@@ -27,7 +27,7 @@ Post.propTypes = {
         comments: PropTypes.arrayOf(
             PropTypes.shape({
                 username: PropTypes.string,
-                text: ProprTypes.string
+                text: PropTypes.string
             })
         )
         
