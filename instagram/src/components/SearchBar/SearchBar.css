@@ -1,0 +1,66 @@
+.SearchBar {
+    width: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding:1%;
+    border-bottom: 1px solid lightgray;
+    margin: 1%;
+}
+
+.logo {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.fa-instagram {
+    line-height: 2rem;
+    font-size: 2rem;
+    padding-right: 13%;
+    border-right: 1px solid gray;
+}
+
+.logoScript {
+    margin-left: 13%;
+}
+
+
+.searchForm {
+    display: flex;
+
+}
+
+.fa-search {
+    padding-left: 1%;
+    margin-left: 1%;
+    color: gray;
+    
+}
+
+input {
+    text-align: center;
+    border-radius: 3px;
+    padding: 0.5%;
+    font-size: 1rem;
+}
+
+.profileIcons{
+    display: flex;
+    justify-content: space-around;
+    line-height: 2rem;
+    font-size: 1.5rem;
+    color: gray;
+}
+
+.fa-compass {
+    
+    margin-right: 100%;
+}
+
+.fa-heart {
+    margin-right: 100%;
+}
+
+.fa-user {
+    margin-right: 200%;
+}
