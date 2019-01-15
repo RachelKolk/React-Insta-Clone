@@ -31,8 +31,18 @@ const Post = props => {
             </div>
 
             <div className="addComment">
-                <div className="bold">Add a comment...</div>
-                <div><i className="fas fa-ellipsis-h"></i></div>
+                {/* <div className="bold">Add a comment...</div>
+                <div><i className="fas fa-ellipsis-h"></i></div> */}
+                <form onSubmit={props.addNewComment}>
+                    <input
+                        value={props.postOnProps.comments.text}
+                        type="text"
+                        name="comment"
+                        placeholder="Add a comment..."
+                        onChange={props.handleChanges}
+                    />
+                </form>
+                <div><i className="fas fa-ellipsis-h"></i></div>   
             </div>
 
         </div> 

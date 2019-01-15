@@ -13,9 +13,30 @@ function CommentSection(props) {
                     commentOnProps={commentInMap}
                 />             
             ))}
+
         </div>
     );
-};
+
+    
+    
+}
+
+// function addNewComment(e, index) {
+//     e.preventDefault();
+//     this.setState({
+        
+//            posts: [
+//                ...this.state.comments,
+//                {
+//                    username: "gardenGnome",
+//                    text: this.state.text,
+
+//                }
+//            ],
+           
+//            text: ''
+//     })
+// }
 
 CommentSection.propTypes = {
    comments: PropTypes.shape({

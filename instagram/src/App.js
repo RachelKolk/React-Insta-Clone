@@ -20,6 +20,30 @@ class App extends Component {
         
   }
 
+  handleChanges = e => {
+    this.setState({ [e.target.name]: e.target.value});
+  }
+
+  addNewComment = (e, index) => {
+    e.preventDefault();
+    this.setState({
+      
+      posts: [
+        ...this.state.comments,
+          { username: "gardenGnome",
+            text: this.state.text,
+          }
+      ],         
+    })
+  }
+
+  postLiked = index => {
+    console.log("Liked!");
+    this.setState(prevState => ({ likes: prevState.likes + 1}))
+
+  };
+  
+
 
   render() {
     console.log("rendering");
