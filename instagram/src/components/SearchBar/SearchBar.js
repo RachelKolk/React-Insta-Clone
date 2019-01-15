@@ -1,15 +1,15 @@
 import React from "react";
-import "./SearchBar.css";
+// import "./SearchBar.css";
 
 function SearchBar() {
     return (
         <div>
-            <img>alt="Instagram logo</img>
+            <img alt="Instagram logo"/>
             <form>
-                <input>
+                <input
                     type="text"
                     name="search"
-                    placeholder="Search"
+                    placeholder="Search" >
                 </input>
             </form>
             
