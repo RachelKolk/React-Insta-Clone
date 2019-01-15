@@ -3,8 +3,8 @@ import PropTypes from "prop-types";
 
 const Comment = props => {
     return (
-        <div>
-            <h4>{props.commentOnProps.username}</h4>
+        <div className="comment">
+            <div><p className="bold">{props.commentOnProps.username}</p></div>
             <p>{props.commentOnProps.text}</p>
         </div>
     )

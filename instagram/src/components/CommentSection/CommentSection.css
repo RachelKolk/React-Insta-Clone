@@ -1,0 +1,14 @@
+.comment {
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: center;
+    margin-left: 1%;
+}
+
+p {
+    padding-left: 1%;
+}
+
+h4 {
+   
+}

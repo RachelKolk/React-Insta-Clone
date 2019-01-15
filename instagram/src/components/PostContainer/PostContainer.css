@@ -1,0 +1,42 @@
+.PostBox {
+    width: auto;
+    border: 1px solid lightgray;
+    border-radius: 2px;
+    margin: 1%;
+}
+
+h4 {
+    margin-left: 1%;
+    font-family: 'Muli', sans-serif;
+    font-weight: 700;
+}
+
+.postHeader {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    
+}
+
+.postedImage {
+
+}
+
+.PostIcons {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 1%;
+}
+
+.fa-heart {
+    font-size: 1.7rem;
+}
+
+.fa-comment {
+    font-size: 1.7rem;
+}
+
+.addComment {
+    display: flex;
+    flex-wrap: nowrap;
+}
