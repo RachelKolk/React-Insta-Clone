@@ -31,8 +31,8 @@ class App extends Component {
     console.log("searching");
     this.setState({
       posts: [
-        this.state.posts.filter((item) => {
-          return item === this.state.search
+        ...dummyData.filter((item) => {
+          return item.username === this.state.search
         })
       ]
    
