@@ -1,46 +1,34 @@
-import React, { Component } from "react";
+import React from "react";
 
-class Login extends Component {
-    constructor(props) {
-        super();
-        this.state = {
-            
-                username: props.username
-                password: props.password
-            
-        };
-    }
 
-    handleChanges = e => {
-        this.setState({ [e.target.name]: e.target.value});
-    }
-
-    render() {
+    function Login(props) {
         return (
             <div>
-                <form>
+                <form id="login" onSubmit={props.login}>
                     <input
-                        value="something"
+                        
                         type="text"
                         name="username"
                         placeholder="username"
-                        onChange={this.handleChanges}
+                        onChange={props.onChange}
                     />
-                </form>
-
-                <form>
+               
                     <input
-                        value="something"
+                        
                         type="text"
                         name="password"
                         placeholder="password"
-                        onChange={this.handleChanges}
+                        onChange={props.onChange}
+                        
                     />
+                    <button>Login</button>
                 </form>
+
+                
 
             </div>
         )
     }
-}
+// }
 
 export default Login;

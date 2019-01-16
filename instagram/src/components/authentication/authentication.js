@@ -1,9 +1,12 @@
 import React, { Component } from "react";
 
-const authenticate = Component =>
+const authenticate = App =>
  class extends React.Component {
+
+
+    
      render() {
-         return <Component />
+         return <App />
      }
  }
 
