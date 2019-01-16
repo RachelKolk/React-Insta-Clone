@@ -27,23 +27,10 @@ const Post = props => {
             />
 
             <div className="timestamp">
-                <h5>{props.postOnProps.timestamp}</h5>
+                <h5>10 hours ago</h5>
             </div>
 
-            <div className="addComment">
-                {/* <div className="bold">Add a comment...</div>
-                <div><i className="fas fa-ellipsis-h"></i></div> */}
-                <form onSubmit={props.addNewComment}>
-                    <input
-                        value={props.postOnProps.comments.text}
-                        type="text"
-                        name="comment"
-                        placeholder="Add a comment..."
-                        onChange={props.handleChanges}
-                    />
-                </form>
-                <div><i className="fas fa-ellipsis-h"></i></div>   
-            </div>
+           
 
         </div> 
     );
