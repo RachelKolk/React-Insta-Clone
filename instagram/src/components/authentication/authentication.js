@@ -1,12 +1,12 @@
 import React from "react";
 
-const authenticate = App => Login => props => {
+const authenticate = LoginPage => PostsPage => props => {
  
     if(props.loggedIn) {
-        return <App />;
+        return <PostsPage />;
     }
     
-    return <Login />;
+    return < LoginPage/>;
 };
 
  export default authenticate;

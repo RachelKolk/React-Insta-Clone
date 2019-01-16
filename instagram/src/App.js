@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
 import PostsPage from "./components/PostContainer/PostsPage";
-import Login from "./components/Login/Login";
-// import PostContainer from "./components/PostContainer/PostContainer";
-// import SearchBar from "./components/SearchBar/SearchBar";
-// import dummyData from "./dummy-data";
+import LoginPage from "./components/Login/LoginPage";
+
 
 import './App.css';
 import authenticate from './components/authentication/authentication';
 
 class App extends Component {
   constructor() {
+    console.log("helpo");
     super();
     this.state = {
      loggedIn: false
@@ -18,10 +17,12 @@ class App extends Component {
   }
 
   componentDidMount() {
+    console.log("comp mounting");
     this.hydrateStateWithLocalStorage();
  }
 
  hydrateStateWithLocalStorage() {
+   console.log("hydrating");
   // for all items in state
   for (let key in this.state) {
     // if the key exists in localStorage
@@ -41,16 +42,18 @@ class App extends Component {
   }
 }
 
-  handleChanges = e => {
-    this.setState({ [e.target.name]: e.target.value});
-    
-  }
 
-  login = () => {
-    console.log("logging in");
-    this.setState(prevState => ({ loggedIn: !prevState.loggedIn }));
-    localStorage.setItem("loggedIn", this.state.loggedIn);
-  };
+
+  // handleChanges = e => {
+  //   this.setState({ [e.target.name]: e.target.value});
+    
+  // }
+
+  // login = () => {
+  //   console.log("logging in");
+  //   this.setState(prevState => ({ loggedIn: !prevState.loggedIn }));
+  //   localStorage.setItem("loggedIn", this.state.loggedIn);
+  // };
 
 
   
@@ -59,11 +62,13 @@ class App extends Component {
     console.log("rendering");
     return (
       <div className="App">
-        <Login 
+        
+        <Authentication loggedIn={this.state.loggedIn} />
+        {/* <Login 
           login={this.login}
           onChange={this.handleChanges}
         />
-         <PostsPage />
+         <PostsPage /> */}
         
 
       </div>
@@ -71,4 +76,6 @@ class App extends Component {
   }
 }
 
-export default authenticate(App)(Login);
+const Authentication = authenticate(LoginPage)(PostsPage);
+
+export default authenticate(App)(LoginPage);
