@@ -1,13 +1,12 @@
-import React, { Component } from "react";
+import React from "react";
 
-const authenticate = App =>
- class extends React.Component {
-
-
+const authenticate = App => Login => props => {
+ 
+    if(props.loggedIn) {
+        return <App />;
+    }
     
-     render() {
-         return <App />
-     }
- }
+    return <Login />;
+};
 
  export default authenticate;

@@ -6,6 +6,7 @@ import Login from "./components/Login/Login";
 // import dummyData from "./dummy-data";
 
 import './App.css';
+import authenticate from './components/authentication/authentication';
 
 class App extends Component {
   constructor() {
@@ -70,4 +71,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default authenticate(App)(Login);
