@@ -22,20 +22,32 @@ class App extends Component {
   }
 
 
+  handleChanges = e => {
+    this.setState({ [e.target.name]: e.target.value});
+  }
 
-  postLiked = e => {
-    console.log("Liked!");
-    this.setState(prevState => ({ likes: prevState.likes + 1}))
-
-  };
-  
+  searchPosts = e => {
+    e.preventDefault();
+    console.log("searching");
+    this.setState({
+      posts: [
+        this.state.posts.filter((item) => {
+          return item === this.state.search
+        })
+      ]
+   
+ })
+}  
 
 
   render() {
     console.log("rendering");
     return (
       <div className="App">
-         <SearchBar />
+         <SearchBar
+            search={this.searchPosts}
+            onChange={this.handleChanges}
+         />
          <PostContainer 
             posts={this.state.posts}
           />

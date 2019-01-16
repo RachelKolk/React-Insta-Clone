@@ -1,7 +1,7 @@
 import React from "react";
 import "./SearchBar.css";
 
-function SearchBar() {
+function SearchBar(props) {
     return (
         <div className="SearchBar">
 
@@ -10,13 +10,13 @@ function SearchBar() {
             <img className="logoScript" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/320px-Instagram_logo.svg.png" alt="Instagram logo"/>
             </div>
 
-            <form className="searchForm">
+            <form onSubmit={props.search}  className="searchForm">
                   
                 <input 
                     type="text"
                     name="search"
-                    placeholder= "  Search" >
-                
+                    placeholder= "  Search" 
+                    onChange={props.onChange}>
                 </input>
                 <i className="fas fa-search"></i>
             </form>

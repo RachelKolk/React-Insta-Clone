@@ -8,7 +8,8 @@ class CommentSection extends Component {
         console.log("firing CommentSection Constructor");
         super();
         this.state = {
-            comments: [...props.comments]
+            comments: [...props.comments],
+            likes: props.likes
         };
         console.log(this.state.comments);
     }
@@ -36,12 +37,26 @@ class CommentSection extends Component {
         })
     }
 
+    incrementLikes = () => {
+        this.setState({
+            likes: this.state.likes + 1
+        })
+    }
+
 
 
  render() {
     console.log("commenting...");
     return (
         <div>
+            <div className="PostIcons">
+            
+                <div onClick={this.incrementLikes}><i className="far fa-heart"></i></div>
+                <div><i className="far fa-comment"></i></div>
+            </div>
+
+            <h4 className="likes">{this.state.likes} likes</h4>
+
              {this.state.comments.map(commentInMap => (  
                  <Comment
                     commentOnProps={commentInMap}

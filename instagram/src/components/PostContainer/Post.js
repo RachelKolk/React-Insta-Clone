@@ -14,18 +14,11 @@ const Post = props => {
             </div>
 
             <img className="postedImage" src={props.postOnProps.imageUrl} alt="post" />
-
-            <div className="PostIcons">
-            <button onClick={props.postLiked} > </button>
-                <div><i className="far fa-heart"></i></div>
-                <div><i className="far fa-comment"></i></div>
-            </div>
-
-            <h4 className="likes">{props.postOnProps.likes} likes</h4>
-            
+          
             
             <CommentSection
                 comments={props.postOnProps.comments}
+                likes={props.postOnProps.likes}
             />
 
             <div className="timestamp">
