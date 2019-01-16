@@ -1,4 +1,5 @@
 import React from "react";
+import moment from "moment";
 import CommentSection from "../CommentSection/CommentSection";
 import PropTypes from "prop-types";
 import "../CommentSection/CommentSection.css";
@@ -15,6 +16,7 @@ const Post = props => {
             <img className="postedImage" src={props.postOnProps.imageUrl} alt="post" />
 
             <div className="PostIcons">
+            <button onClick={props.postLiked} > </button>
                 <div><i className="far fa-heart"></i></div>
                 <div><i className="far fa-comment"></i></div>
             </div>
@@ -27,7 +29,7 @@ const Post = props => {
             />
 
             <div className="timestamp">
-                <h5>10 hours ago</h5>
+                <h5>{moment(props.postOnProps.timestamp, 'MMMM Do YYYY, h:mm:ss a').fromNow()}</h5>
             </div>
 
            

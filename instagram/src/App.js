@@ -23,7 +23,7 @@ class App extends Component {
 
 
 
-  postLiked = index => {
+  postLiked = e => {
     console.log("Liked!");
     this.setState(prevState => ({ likes: prevState.likes + 1}))
 
