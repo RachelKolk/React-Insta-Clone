@@ -25,15 +25,16 @@ class CommentSection extends Component {
         e.preventDefault();
         console.log("posting comment");
         console.log(e);
+        let user = localStorage.getItem("username");
         this.setState({
           
           comments: [
             ...this.state.comments,
-              { username: "gardenGnome",
+              { username: JSON.parse(user),
                 text: this.state.comment, //assigning the form input value to the new comment
               }
           ],
-          comment: "Add a comment..."
+          comment: ""
         })
     }
 
