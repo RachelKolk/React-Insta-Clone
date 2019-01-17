@@ -1,7 +1,19 @@
 import React, { Component } from "react";
+import styled from 'styled-components';
 // import PropTypes from "prop-types";
+import {H4Header} from "../StyledComponents";
 
 import Comment from "./Comment";
+
+const AddComment = styled.div`
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding-top: 3%;
+    padding-left: 3%;
+    padding-bottom: 2%;
+    border-top: 1px solid lightgray;
+`;
 
 class CommentSection extends Component {
     constructor(props) {
@@ -56,7 +68,7 @@ class CommentSection extends Component {
                 <div><i className="far fa-comment"></i></div>
             </div>
 
-            <h4 className="likes">{this.state.likes} likes</h4>
+            <H4Header>{this.state.likes} likes</H4Header>
 
              {this.state.comments.map(commentInMap => (  
                  <Comment
@@ -64,9 +76,8 @@ class CommentSection extends Component {
                 />             
             ))}
 
-            <div className="addComment">
-                {/* <div className="bold">Add a comment...</div>
-                <div><i className="fas fa-ellipsis-h"></i></div> */}
+            <AddComment>
+                
                 <form onSubmit={this.addNewComment}>
                     <input
                         value={this.state.comment} //creating a new variable to hold the data in state
@@ -76,8 +87,8 @@ class CommentSection extends Component {
                         onChange={this.handleChanges}
                     />
                 </form>
-                <div><i className="fas fa-ellipsis-h"></i></div>   
-            </div>
+                {/* <div><i className="fas fa-ellipsis-h"></i></div>    */}
+            </AddComment>
 
         </div>
     );

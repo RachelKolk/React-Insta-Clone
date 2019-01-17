@@ -1,4 +1,4 @@
-.PostBox {
+/* .PostBox {
     width: 640px;
     border: 1px solid lightgray;
     border-radius: 2px;
@@ -7,33 +7,30 @@
     margin-bottom: 2%;
     padding-bottom: 1%;
     
-}
+} */
 
-h4 {
+/* h4 {
     margin-left: 1%;
     font-family: 'Muli', sans-serif;
     font-weight: 700;
-}
+} */
 
-.postHeader {
+/* .postHeader {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     margin-left: 1%;
-}
+} */
 
-.userLogo {
+/* .userLogo {
     max-height: 50px;
     padding-left: 1%;
     padding-bottom: 1%;
     padding-top: 1%;
     padding-right: 1%;
     border-radius: 155px;
-}
+} */
 
-.postedImage {
-
-}
 
 .PostIcons {
     display: flex;
@@ -59,9 +56,9 @@ h4 {
     padding-left: 1%;
 }
 
-.timestamp {
+/* .timestamp {
     padding-left: 2%;
-}
+} */
 
 .addComment {
     display: flex;
@@ -73,9 +70,7 @@ h4 {
     border-top: 1px solid lightgray;
 }
 
-form {
-    border: none;
-}
+
 
 .fa-ellipsis-h {
     padding-right: 75%;
