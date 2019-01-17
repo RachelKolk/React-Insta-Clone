@@ -36,6 +36,12 @@ class PostsPage extends Component {
      
    })
   }  
+
+    logout = () => {
+        console.log("logging out");
+        localStorage.clear();
+        this.setState({loggedIn: false});
+    };
   
   
     render() {
@@ -49,6 +55,7 @@ class PostsPage extends Component {
            <PostContainer 
               posts={this.state.posts}
             />
+            <button onClick={this.logout}>Log Out</button>
         </div>
       );
     }

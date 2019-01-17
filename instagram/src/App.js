@@ -21,26 +21,28 @@ class App extends Component {
     this.hydrateStateWithLocalStorage();
  }
 
- hydrateStateWithLocalStorage() {
-   console.log("hydrating");
-  // for all items in state
-  for (let key in this.state) {
-    // if the key exists in localStorage
-    if (localStorage.hasOwnProperty(key)) {
-      // get the key's value from localStorage
-      let value = localStorage.getItem(key);
+  hydrateStateWithLocalStorage() {
+    console.log("hydrating");
+    // for all items in state
+    for (let key in this.state) {
+      // if the key exists in localStorage
+      if (localStorage.hasOwnProperty(key)) {
+        // get the key's value from localStorage
+        let value = localStorage.getItem(key);
 
-      // parse the localStorage string and setState
-      try {
-        value = JSON.parse(value);
-        this.setState({ [key]: value });
-      } catch (e) {
-        // handle empty string
-        this.setState({ [key]: value });
+        // parse the localStorage string and setState
+        try {
+          value = JSON.parse(value);
+          this.setState({ [key]: value });
+        } catch (e) {
+          // handle empty string
+          this.setState({ [key]: value });
+        }
       }
     }
   }
-}
+
+ 
 
 
 
