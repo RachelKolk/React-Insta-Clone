@@ -55,7 +55,10 @@ class PostsPage extends Component {
            <PostContainer 
               posts={this.state.posts}
             />
-            <button onClick={this.logout}>Log Out</button>
+            <form>
+                <button onClick={this.logout}>Log Out</button>
+            </form>
+            
         </div>
       );
     }

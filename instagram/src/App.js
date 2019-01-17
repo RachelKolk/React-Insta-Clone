@@ -45,7 +45,6 @@ class App extends Component {
  
 
 
-
   // handleChanges = e => {
   //   this.setState({ [e.target.name]: e.target.value});
     
@@ -80,4 +79,4 @@ class App extends Component {
 
 const Authentication = authenticate(LoginPage)(PostsPage);
 
-export default authenticate(App)(LoginPage);
+export default App;
