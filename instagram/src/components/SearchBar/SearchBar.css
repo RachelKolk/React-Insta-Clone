@@ -1,48 +1,21 @@
-.SearchBar {
-    width: auto;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    padding:1%;
-    border-bottom: 1px solid lightgray;
-    margin: 1%;
-}
 
-.logo {
-    display: flex;
-    flex-wrap: nowrap;
-}
 
 .fa-instagram {
     line-height: 2rem;
-    font-size: 2rem;
-    padding-right: 13%;
+    font-size: 5rem;
+    padding-right: 8%;
+    padding-top: 8%;
     border-right: 1px solid gray;
 }
 
-.logoScript {
-    margin-left: 13%;
-    max-height: 2rem;
-}
 
 
-.searchForm {
-    display: flex;
-
-}
-
-.fa-search {
-    padding-left: 1%;
-    margin-left: 1%;
+.fas fa-search {
+    position: absolute;
+    top: 10px;
+    left: 10px;
     color: gray;
     
-}
-
-input {
-    text-align: center;
-    border-radius: 3px;
-    padding: 0.5%;
-    font-size: 1rem;
 }
 
 .profileIcons{
