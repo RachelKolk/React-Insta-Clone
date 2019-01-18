@@ -3,11 +3,18 @@ import styled from "styled-components";
 
 
 const LoginPage = styled.div`
-    display: flex;
-    flex-wrap: nowrap;
+    
+`;
+
+const InstaLanding = styled.img`
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3%;
 `;
 
 const LoginForm = styled.form`
+    text-align: center;
     margin: 3%;
     padding: 3%;
 `;
@@ -15,13 +22,22 @@ const LoginForm = styled.form`
 const LoginInput = styled.input`
     line-height: 2rem;
     border-radius: 4px;
+    width: 15rem;
+`;
+
+const Password = styled(LoginInput)`
+    margin-top: 2%;
+    margin-bottom: 2%;
+
 `;
 
 const LoginButton = styled.button`
     background-color: lightgray;
     padding: 10px 30px
     border-radius: 4px;
-    margin: 3%;
+    
+    margin-left: auto;
+    margin-right: auto;
 
     &:hover {
     padding: 11px 31px;
@@ -31,8 +47,12 @@ const LoginButton = styled.button`
 
     function Login(props) {
         return (
+           
             <LoginPage>
-                <LoginForm id="login" onSubmit={props.login}>
+                
+                <InstaLanding src="/instagram-colored.png" alt="instagram logo"></InstaLanding>
+                
+                <LoginForm onSubmit={props.login}>
                     <LoginInput
                         
                         type="text"
@@ -41,7 +61,7 @@ const LoginButton = styled.button`
                         onChange={props.onChange}
                     />
                
-                    <LoginInput
+                    <Password
                         
                         type="text"
                         name="password"
@@ -49,12 +69,15 @@ const LoginButton = styled.button`
                         onChange={props.onChange}
                         
                     />
+                    <div>
                     <LoginButton>Login</LoginButton>
+                    </div>
                 </LoginForm>
 
                 
 
             </LoginPage>
+            
         )
     }
 // }

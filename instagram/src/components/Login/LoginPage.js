@@ -1,5 +1,14 @@
 import React, { Component } from 'react';
+import styled from "styled-components";
 import Login from "./Login";
+
+const LoginScreen = styled.div`
+    width: 640px%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    
+`;
 
 class LoginPage extends Component {
     constructor() {
@@ -24,12 +33,12 @@ class LoginPage extends Component {
 
     render() {
         return (
-            <div className="loginScreen">
+            <LoginScreen>
                 <Login 
                     login={this.login}
                     onChange={this.handleChanges}
                 />
-            </div>
+            </LoginScreen>
         )
     }
 }

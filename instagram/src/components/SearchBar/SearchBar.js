@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import "./SearchBar.css";
 
 const Header = styled.div`
+    
     width: auto;
     display: flex;
     flex-wrap: nowrap;
@@ -13,12 +14,13 @@ const Header = styled.div`
 `;
 
 const LogoHeader = styled.div`
+    
     display: flex;
     flex-wrap: nowrap;
 `;
 
 const LogoImage = styled.img`
-    line-height: 5rem;
+    max-height: 75px;
 `;
 
 
