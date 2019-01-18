@@ -24,4 +24,5 @@ export const Bold = styled.h4`
 export const H4Header = styled.h4`
     margin-left: 3%;
     font-family: 'Muli', sans-serif;
+    top-margin: -2%;
 `;

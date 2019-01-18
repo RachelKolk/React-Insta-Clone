@@ -38,7 +38,7 @@ const UserTag = styled.h4`
 `;
 
 const TimeStamp = styled.div`
-    padding-left: 2%;
+    padding-left: 3%;
 `;
 
 const Date = styled.h5`

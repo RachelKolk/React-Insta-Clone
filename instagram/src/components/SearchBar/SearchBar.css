@@ -8,22 +8,12 @@
     border-right: 1px solid gray;
 }
 
-
-
 .fas fa-search {
     position: absolute;
     top: 10px;
     left: 10px;
     color: gray;
     
-}
-
-.profileIcons{
-    display: flex;
-    justify-content: space-around;
-    line-height: 2rem;
-    font-size: 1.5rem;
-    color: gray;
 }
 
 .fa-compass {

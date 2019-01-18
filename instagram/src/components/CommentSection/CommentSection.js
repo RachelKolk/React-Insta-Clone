@@ -5,14 +5,33 @@ import {H4Header} from "../StyledComponents";
 
 import Comment from "./Comment";
 
+const PostIcons = styled.div`
+    display: flex;
+    flex-wrap: wrap;    
+    margin-top: 1%;    
+    width: 100%;
+    padding-left: 3%;
+`;
+
 const AddComment = styled.div`
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
-    padding-top: 3%;
+    margin-top: 3%;
+    padding-top: 1%;
     padding-left: 3%;
     padding-bottom: 2%;
     border-top: 1px solid lightgray;
+`;
+
+const CommentForm = styled.form`
+    
+`;
+
+const CommentInput = styled.input`
+    line-height: 4rem;
+    width: 600px;
+    border: 0px solid;
 `;
 
 class CommentSection extends Component {
@@ -62,11 +81,11 @@ class CommentSection extends Component {
     console.log("commenting...");
     return (
         <div>
-            <div className="PostIcons">
+            <PostIcons>
             
                 <div onClick={this.incrementLikes}><i className="far fa-heart"></i></div>
                 <div><i className="far fa-comment"></i></div>
-            </div>
+            </PostIcons>
 
             <H4Header>{this.state.likes} likes</H4Header>
 
@@ -78,15 +97,15 @@ class CommentSection extends Component {
 
             <AddComment>
                 
-                <form onSubmit={this.addNewComment}>
-                    <input
+                <CommentForm onSubmit={this.addNewComment}>
+                    <CommentInput
                         value={this.state.comment} //creating a new variable to hold the data in state
                         type="text"
                         name="comment"
-                        placeholder="Add a comment..."
+                        placeholder=" Add a comment..."
                         onChange={this.handleChanges}
                     />
-                </form>
+                </CommentForm>
                 {/* <div><i className="fas fa-ellipsis-h"></i></div>    */}
             </AddComment>
 

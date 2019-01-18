@@ -38,6 +38,14 @@ const SearchInput = styled.input`
     text-indent: 32px;
 `;
 
+const ProfileIcons = styled.div`
+    display: flex;
+    justify-content: space-around;
+    line-height: 2rem;
+    font-size: 1.5rem;
+    color: gray;
+`;
+
 function SearchBar(props) {
     return (
         <Header>
@@ -59,11 +67,11 @@ function SearchBar(props) {
                 
             </SearchForm>
             
-            <div className="profileIcons">
+            <ProfileIcons>
             <i className="far fa-compass"></i>
             <i className="far fa-heart"></i>
             <i className="far fa-user"></i>
-            </div>
+            </ProfileIcons>
             
         </Header>
     );
