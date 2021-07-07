@@ -1,0 +1,30 @@
+
+
+.fa-instagram {
+    line-height: 2rem;
+    font-size: 5rem;
+    padding-right: 8%;
+    padding-top: 8%;
+    border-right: 1px solid gray;
+}
+
+.fas fa-search {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: gray;
+    
+}
+
+.fa-compass {
+    
+    margin-right: 40%;
+}
+
+.far fa-heart {
+    margin-right: 40%;
+}
+
+.fa-user {
+    margin-right: 40%;
+}
